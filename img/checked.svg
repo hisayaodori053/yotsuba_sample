@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 29.14">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #567924;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        fill: #8cc63f;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="_クリニック案内" data-name="クリニック案内">
+    <g>
+      <rect class="cls-1" x="1" y="6.63" width="21.51" height="21.51"/>
+      <path class="cls-2" d="m27.68,0c-7.37,4.09-14.83,15.74-14.83,15.74l-6.73-7.64-4,3.82,9.73,12.1,3.55-.14C19.95,10.24,30,1.09,30,1.09l-2.32-1.09Z"/>
+    </g>
+  </g>
+</svg>

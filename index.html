@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>よつ葉デンタルクリニック</title>
+    <meta name="description" content="よつ葉デンタルクリニックは、名古屋駅18番出口直通の完全予約制の総合歯科医院です。平日は22時まで営業しておりますので、働きながら無理なく通院する事が出来ます。">
+    <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="./js/script.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <header class="header" id="header">
+        <div class="header__info">
+            <h1 class="header__info-left"><img src="./img/logo.svg" alt="よつ葉デンタルクリニック"></h1>
+            <div class="header__info-right">
+                <table class="header__info-calendar">
+                    <tr class="header__info-calendar-line header__info-calendar-line--01">
+                        <th class="header__info-calendar-th header__info-calendar-th--time">診療時間</th>
+                        <th class="header__info-calendar-th header__info-calendar-th--day">平日</th>
+                        <th class="header__info-calendar-th header__info-calendar-th--day">土</th>
+                        <th class="header__info-calendar-th header__info-calendar-th--day">日</th>
+                        <th class="header__info-calendar-th header__info-calendar-th--day">祝</th>
+                    </tr>
+                    <tr class="header__info-calendar-line header__info-calendar-line--02">
+                        <td class="header__info-calendar-td header__info-calendar-td--time">10:00 - 13:00</td>
+                        <td class="header__info-calendar-td header__info-calendar-td--day"><img src="./img/calender-radius.svg" alt="診察可" class="header__info-calendar-radius"></td>
+                        <td class="header__info-calendar-td header__info-calendar-td--day"><img src="./img/calender-radius.svg" alt="診察可" class="header__info-calendar-radius"></td>
+                        <td class="header__info-calendar-td header__info-calendar-td--day"><img src="./img/calender-none.svg" alt="休診" class="header__info-calendar-none"></td>
+                        <td class="header__info-calendar-td header__info-calendar-td--day"><img src="./img/calender-none.svg" alt="休診" class="header__info-calendar-none"></td>
+                    </tr>
+                    <tr class="header__info-calendar-line header__info-calendar-line--03">
+                        <td class="header__info-calendar-td header__info-calendar-td--time">15:00 - 22:00</td>
+                        <td class="header__info-calendar-td header__info-calendar-td--day"><img src="./img/calender-radius.svg" alt="診察可" class="header__info-calendar-radius"></td>
+                        <td class="header__info-calendar-td header__info-calendar-td--day"><img src="./img/calender-none.svg" alt="休診" class="header__info-calendar-none"></td>
+                        <td class="header__info-calendar-td header__info-calendar-td--day"><img src="./img/calender-none.svg" alt="休診" class="header__info-calendar-none"></span></td>
+                        <td class="header__info-calendar-td header__info-calendar-td--day"><img src="./img/calender-none.svg" alt="休診" class="header__info-calendar-none"></td>
+                    </tr>
+                </table>
+                <a class="header__info-phone  c-phonebtn" href="tel:0521234567" target="_blank" rel="noopener noreferrer">
+                    <span class="header__info-phone--number  c-phonebtn--number">052-123-4567</span><br>
+                    <span class="header__info-phone--time01  c-phonebtn--time01">平日 10:00 - 13:00 / 15:00 - 22:00</span>
+                    <span class="header__info-phone--time02  c-phonebtn--time02">土曜 10:00 - 13:00</span>
+                </a>
+            </div>
+        </div>
+        <nav class="header__nav">
+            <div class="header__nav-btn" id="hamburger-btn">
+                <span class="header__nav-btn--line"></span>
+                <span class="header__nav-btn--line"></span>
+                <span class="header__nav-btn--line"></span>
+                <span class="header__nav-btn--text">Menu</span>
+            </div>
+            <div class="header__nav-overlay" id="hamburger-overlay">
+                <!-- <div class="header__nav-overlay-outer"></div> -->
+                <div class="header__nav-overlay-inner" id="hamburger-cont">
+                    <div class="header__nav-overlay-cont">
+                        <h2 class="header__nav-overlay-logo"><img src="./img/logo_wt.svg" alt="よつ葉デンタルクリニック"></h2>
+                        <ul class="header__nav-overlay-nav">
+                            <li><a href="#news">ニュース</a></li>
+                            <li><a href="#info">クリニック案内</a></li>
+                            <li><a href="#points">３つの特徴</a></li>
+                            <li><a href="#treatment">診療案内</a></li>
+                            <li><a href="#staff">スタッフ紹介</a></li>
+                            <li class="header__nav-overlay-nav-btns">
+                                <a href="#" class="header__nav-overlay-nav-linebtn c-linebtn">
+                                    <img src="./img/line_bnr_mini02.svg" alt="LINEかんたん診察予約">
+                                </a>
+                                <a class="header__nav-overlay-nav-phonebtn c-phonebtn" href="tel:0521234567" target="_blank" rel="noopener noreferrer">
+                                    <span class="header__nav-overlay-nav-phonebtn--number c-phonebtn--number">052-123-4567</span><br>
+                                    <span class="header__nav-overlay-nav-phonebtn--time01 c-phonebtn--time01">平日 10:00 - 13:00 / 15:00 - 22:00</span>
+                                    <span class="header__nav-overlay-nav-phonebtn--time02 c-phonebtn--time02">土曜 10:00 - 13:00</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <a href="#" target="_blank" class="header__linebtn" ><span class="header__linebtn--txt" >かんたん<br>診察予約</span></a>
+    </header>
+    <!-- / header -->
+
+    <!-- fv -->
+    <section class="fv" id="fv">
+        <div class="fv__inner">
+            <div class="fv__cont">
+                <h2 class="fv__ttl"><span class="c-green">名駅直通・完全予約制</span>の歯科医院<br>待ち時間なく、歯の健康と美しさを保つ</h2>
+                <p class="fv__txt">よつ葉デンタルクリニックは、名駅18番出口直通の<br class="c-br--sp">完全予約制の総合歯科医院です。<br>平日は22時まで営業しておりますので、<br class="c-br--sp">働きながら無理なく通院する事が出来ます。</p>
+                <div class="fv__points">
+                    <div class="fv__point fv__point--01">
+                        <p class="fv__point-cont"><span class="fv__point-cont--large">名古屋駅<br>直通</span><br>18番出口0分</p>
+                    </div>
+                    <div class="fv__point fv__point--02">
+                        <p class="fv__point-cont"><span class="fv__point-cont--large">完全予約制</span><br>待ち時間<span class="fv__point-cont--large"> なし</span></p>
+                    </div>
+                    <div class="fv__point fv__point--03">
+                        <p class="fv__point-cont"><span class="fv__point-cont--large">審美治療</span><br>治療実績数<br>名古屋 <span class="fv__point-cont--large">No1</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fv__outer">
+            <ul class="fv__menu">
+                <li><a href="#news">ニュース</a></li>
+                <li><a href="#info">クリニック案内</a></li>
+                <li><a href="#points">3つの特徴</a></li>
+                <li><a href="#treatment">診療内容</a></li>
+                <li><a href="#staff">スタッフ紹介</a></li>
+            </ul>
+        </div>
+    </section>
+    <!-- / fv -->
+
+    <!-- news -->
+    <section class="news" id="news">
+        <div class="news__ttl c-inner">
+            <h2 class="news__ttl-inner c-inner">
+                <span class="news__ttl-inner--en">News</span>
+                <span class="news__ttl-inner--ja">新着情報</span>
+            </h2>
+        </div>
+        <div class="news__cont">
+            <div class="news__cont-inner  slide-right c-inner">
+                <ul class="news__cont-items">
+                    <li class="news__cont-item"><a href=""><span class="news__cont-item--date">2025.01.01</span>タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</a></li>
+                    <li class="news__cont-item"><a href=""><span class="news__cont-item--date">2025.01.01</span>タイトルタイトル</a></li>
+                </ul>
+                <a href="#" class="news__cont-btn c-btn"><span class="news__cont-btn--inner c-btn--inner">more</span></a>
+            </div>
+        </div>
+    </section>
+    <!-- / news -->
+
+    <!-- info -->
+    <section class="info" id="info">
+        <h2 class="info__ttl01 c-h2 c-h2--left c-h2--info">
+            <div class="info__ttl01-inner c-h2__ttl">
+                <span class="info__ttl01--en c-h2__ttl--en">information</span>
+                <span class="info__ttl01--ja c-h2__ttl--ja">クリニック案内</span>
+            </div>
+        </h2>
+        <section class="info__overview">
+            <h3 class="info__ttl02 c-h3 c-h3--left">
+                <div class="info__ttl02-inner c-h3__ttl">
+                    <span class="info__ttl02--tag c-h3__ttl--tag">名古屋駅18番出口直通、待ち時間のなしの診療なら</span>
+                    <span class="info__ttl02--txt c-h3__ttl--txt">よつ葉デンタルクリニック</span>
+                </div>
+            </h3>
+            <div class="info__overview-cont">
+                <div class="info__overview-detail slide-left">
+                    <ul class="info__overview-checlist c-checklist">
+                        <li class="info__overview-checklist-li c-checklist c-checklist__li">名古屋駅徒歩0分!<span class="info__overview-checlist-li--mini c-checklist__li--mini"> (18番出口直通)</span><br>仕事帰りの受診も◎ <span class="info__overview-checlist-li--mini c-checklist__li--mini">(平日は22時まで営業）</span></li>
+                        <li class="info__overview-checklist-li c-checklist__li">完全予約制で待ち時間ゼロ<br>時間に余裕がない方でも通いやすい</li>
+                        <li class="info__overview-hecklist-li c-checklist__li">審美治療の症例実績数・名古屋地区No1<br>個性に合わせた、自然で美しい歯を</li>
+                    </ul>
+                    <p class="info__overview-txt">名古屋駅直通の完全予約制の総合歯科医院です。<br>平日は22時まで営業し、仕事帰りの通院も可能。<br>虫歯・歯周病治療などの一般治療に加え、<br class="c-br--pc">歯の美しさを追求する審美治療も行なっています。</p>
+                </div>
+                <div class="info__overview-img slide-right">
+                    <img src="./img/clinic_img01.jpg" alt="名古屋駅">
+                </div>
+            </div>
+        </section>
+
+        <section class="info__access c-inner">
+            <h3 class="info__access-ttl c-h3v2">アクセス</h3>
+            <div class="info__access-cont slide-up">
+                <div class="info__access-item info__access-item--01">
+                    <h4 class="info__access-ttl02">Address</h4>
+                    <p class="info__access-txt">
+                        <span class="info__access-txt--green c-green">〒450-1007</span><br>
+                        愛知県名古屋市中村区名駅7丁目205 - 31　名駅セントラルセブンビル７階(名駅18番出口直通）<br>
+                        <span class="info__access-txt--green c-green">TEL:</span>052 - 123 - 4567／<span class="info__access-txt--green c-green">FAX:</span> 06-6345-8146
+                    </p>
+                </div>
+                <div class="info__access-item info__access-item--02">
+                    <h4 class="info__access-ttl02">Google Map</h4>
+                    <div class="info__access-gmap">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1630.7133698716616!2d136.8794378520898!3d35.17091504154591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600376e794d78b89%3A0x81f7204bf8261663!2z5ZCN5Y-k5bGL6aeF!5e0!3m2!1sja!2sjp!4v1760403399989!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info__contact c-inner">
+            <h3 class="info__contact-ttl c-h3v2">ご予約・お問い合わせ</h3>
+            <div class="info__contact-cont slide-up">
+                <div class="info__contact-item info__contact-item--01">
+                    <h4 class="info__contact-ttl02">お電話での<br>ご予約</h4>
+                    <div class="info__contact-phone">
+                        <a class="info__contact-phone-number  c-phonebtn" href="tel:0521234567" target="_blank" rel="noopener noreferrer">
+                            <span class="info__contact-phone-number--number  c-phonebtn--number">052-123-4567</span><br>
+                            <span class="info__contact-phone-number--time01  c-phonebtn--time01">※営業時間内のみご予約可能<br>時間外のご予約は、LINE予約へ</span>
+                        </a>
+                        <table class="info__contact-calendar">
+                            <tr class="info__contact-calendar-line info__contact-calendar-line--01">
+                                <th class="info__contact-calendar-th info__contact-calendar-th--time">診療時間</th>
+                                <th class="info__contact-calendar-th info__contact-calendar-th--day">月</th>
+                                <th class="info__contact-calendar-th info__contact-calendar-th--day">火</th>
+                                <th class="info__contact-calendar-th info__contact-calendar-th--day">水</th>
+                                <th class="info__contact-calendar-th info__contact-calendar-th--day">木</th>
+                                <th class="info__contact-calendar-th info__contact-calendar-th--day">金</th>
+                                <th class="info__contact-calendar-th info__contact-calendar-th--day">土</th>
+                                <th class="info__contact-calendar-th info__contact-calendar-th--day">日</th>
+                                <th class="info__contact-calendar-th info__contact-calendar-th--day">祝</th>
+                            </tr>
+                            <tr class="info__contact-calendar-line info__contact-calendar-line--02">
+                                <td class="info__contact-calendar-td info__contact-calendar-td--time">10:00 - 13:00</td>
+                                <td class="info__contact-calendar-td info__contact-calendar-td--day"><img src="./img/calender-radius.svg" alt="診察可" class="info__contact-calendar-radius"></td>
+                                <td class="info__contact-calendar-td info__contact-calendar-td--day"><img src="./img/calender-radius.svg" alt="診察可" class="info__contact-calendar-radius"></td>
+                                <td class="info__contact-calendar-td info__contact-calendar-td--day"><img src="./img/calender-radius.svg" alt="診察可" class="info__contact-calendar-radius"></td>
+                                <td class="info__contact-calendar-td info__contact-calendar-td--day"><img src="./img/calender-radius.svg" alt="診察可" class="info__contact-calendar-radius"></td>
+                                <td class="info__contact-calendar-td info__contact-calendar-td--day"><img src="./img/calender-radius.svg" alt="診察可" class="info__contact-calendar-radius"></td>
+                                <td class="info__contact-calendar-td info__contact-calendar-td--day"><img src="./img/calender-radius.svg" alt="診察可" class="info__contact-calendar-radius"></td>
+                                <td class="info__contact-calendar-td info__contact-calendar-td--day"><img src="./img/calender-none.svg" alt="休診" class="info__contact-calendar-none"></td>
+                                <td class="info__contact-calendar-td info__contact-calendar-td--day"><img src="./img/calender-none.svg" alt="休診" class="info__contact-calendar-none"></td>
+                            </tr>
+                            <tr class="info__contact-calendar-line info__contact-calendar-line--03">
+                                <td class="info__contact-calendar-td info__contact-calendar-td--time">15:00 - 22:00</td>
+                                <td class="info__contact-calendar-td info__contact-calendar-td--day"><img src="./img/calender-radius.svg" alt="診察可" class="info__contact-calendar-radius"></td>
+                                <td class="info__contact-calendar-td info__contact-calendar-td--day"><img src="./img/calender-radius.svg" alt="診察可" class="info__contact-calendar-radius"></td>
+                                <td class="info__contact-calendar-td info__contact-calendar-td--day"><img src="./img/calender-radius.svg" alt="診察可" class="info__contact-calendar-radius"></td>
+                                <td class="info__contact-calendar-td info__contact-calendar-td--day"><img src="./img/calender-radius.svg" alt="診察可" class="info__contact-calendar-radius"></td>
+                                <td class="info__contact-calendar-td info__contact-calendar-td--day"><img src="./img/calender-radius.svg" alt="診察可" class="info__contact-calendar-radius"></td>
+                                <td class="info__contact-calendar-td info__contact-calendar-td--day"><img src="./img/calender-none.svg" alt="休診" class="info__contact-calendar-none"></td>
+                                <td class="info__contact-calendar-td info__contact-calendar-td--day"><img src="./img/calender-none.svg" alt="休診" class="info__contact-calendar-none"></span></td>
+                                <td class="info__contact-calendar-td info__contact-calendar-td--day"><img src="./img/calender-none.svg" alt="休診" class="info__contact-calendar-none"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="info__contact-item info__contact-item--02">
+                    <h4 class="info__contact-ttl02">LINE予約<br>(24時間受付)</h4>
+                    <a href="#" class="info__contact-linebnr"><img src="./img/line_bnr.jpg" alt="LINE連携で24時間いつでも簡単診察予約"></a>
+                </div>
+            </div>
+        </section>
+
+    </section>
+    <!-- / info -->
+
+    <!-- point -->
+    <section class="points" id="points">
+
+        <h2 class="points__ttl01 c-h2 c-h2--right c-h2--points">
+            <div class="points__ttl01__inner c-h2__ttl">
+                <span class="points__ttl01--en c-h2__ttl--en">Points</span>
+                <span class="points__ttl01--ja c-h2__ttl--ja">3つの特徴</span>
+            </div>
+        </h2>
+
+        <section class="points__cont points__cont--left points__cont--01">
+            <h3 class="points__ttl02 c-h3 c-h3--left slide-left">
+                <div class="points__ttl02--inner c-h3__ttl">
+                    <span class="points__ttl02--tag c-h3__ttl--tag">Point. 01</span>
+                    <span class="points__ttl02--txt c-h3__ttl--txt">IT技術と連携し、<br>患者さまひとりひとりに<br class="c-br--sp">寄り添う診療を致します</span>
+                </div>
+            </h3>
+
+            <div class="points__item points__item--01">
+                <div class="points__item-txts slide-left">
+                    <h4 class="points__item-ttl c-checklist__ttl">LINEがデジタル診察券に。<br>ご予約や治療データの確認も、LINE１つで簡単にできます。</h4>
+                    <p class="points__item-txt">LINE友達登録後、診察券番号を入力するだけで、あなただけのマイページに自動ログイン。<br>LINEから、いつでも・どこでも予約や治療データ（電子カルテ）のご確認が可能になります。</p>
+                </div>
+                <p class="points__item-img slide-right"><img src="./img/point01_01.jpg" alt="LINEから、いつでも・どこでも予約や治療データ（電子カルテ）のご確認が可能になります。"></p>
+            </div>
+            <div class="points__item points__item--02">
+                <div class="points__item-txts slide-right">
+                    <h4 class="points__item-ttl c-checklist__ttl">担当医師・衛生士固定で、<br>個性を尊重した、最適かつ安定した治療をご提供致します。</h4>
+                    <p class="points__item-txt">担当医師・衛生士は固定制により、患者さまの個性や状態を理解したより適切な治療を提供いたしています。<br><span class="points__item-txt--notes">※ご希望があれば、担当医・衛生士の変更にも対応いたしますで、ご遠慮なくお申し付けください。</span></p>
+                </div>
+                <p class="points__item-img slide-left"><img src="./img/point01_02.jpg" alt="院長と医師"></p>
+            </div>
+            <div class="points__item points__item--03">
+                <div class="points__item-txts slide-left">
+                    <h4 class="points__item-ttl c-checklist__ttl">IT技術による情報管理。<br>最新3D技術を用い、「立体的なカルテ」をご提供致します。</h4>
+                    <p class="points__item-txt">よつ歯デンタルクリニックでは、最新の3Dスキャナを用いて患者様の歯を３Dデータとして立体的に再現・管理いたします。<br>従来の型取り作業を行う必要がなくなるため、虫歯治療からセラミックの装着までの治療を、1日で行うことも可能です。<br>3Dデータのほか、口腔内の写真もデータベースで管理し、LINEのマイページからいつでもご確認いただけるようになっています。</p>
+                </div>
+                <p class="points__item-img slide-right"><img src="./img/point01_03.jpg" alt="歯の3D画像"></p>
+            </div>
+            <a href="#" class="points__btn c-btn slide-up"><span class="points__btn__inner c-btn--inner">more</span></a>
+        </section>
+
+        <section class="points__cont points__cont--right points__cont--02">
+            <h3 class="points__ttl02 c-h3 c-h3--right slide-right">
+                <div class="points__ttl02--inner c-h3__ttl">
+                    <span class="points__ttl02--tag c-h3__ttl--tag">Point. 02</span>
+                    <span class="points__ttl02--txt c-h3__ttl--txt">完全予約制&好立地により、<br>スケジュールへの影響を<br class="c-br--sp">最小限に抑えます</span>
+                </div>
+            </h3>
+            <div class="points__item points__item--01">
+                <div class="points__item-txts slide-left">
+                    <h4 class="points__item-ttl c-checklist__ttl">完全予約制のため、待ち時間ゼロ。<br>仕事のすき間時間にも<br class="c-br--sp">安心してご来院いただけます</h4>
+                    <p class="points__item-txt">当院は完全予約制かつ治療内容によって予約枠の時間を調整していますので、待ち時間ゼロで治療を受けられます。<br>仕事の休み時間や、予定の合間など、患者様のスケジュールへの影響を最小限に、受診いただけます。</p>
+                </div>
+                <p class="points__item-img slide-right"><img src="./img/point02_01.jpg" alt="予約をする女性"></p>
+            </div>
+            <div class="points__item points__item--02">
+                <div class="points__item-txts slide-right">
+                    <h4 class="points__item-ttl c-checklist__ttl">名古屋駅18番出口直通、<br>JR線下車後5分以内にはご来院できます</h4>
+                    <p class="points__item-txt">JR線下車後徒歩5分、地下鉄線下車後徒歩3分、名鉄線下車後徒歩8分の好立地。<br>名駅セントラルセブンビルは名古屋駅18番出口直通のため外へ出ることなく、そのままご来院いただけます。</p>
+                </div>
+                <p class="points__item-img slide-left"><img src="./img/point02_02.jpg" alt="名古屋駅18番出口"></p>
+            </div>
+            <div class="points__item points__item--03">
+                <div class="points__item-txts slide-left">
+                    <h4 class="points__item-ttl c-checklist__ttl">平日は22時までの夜間診療<br>仕事帰りにもお気軽にお越しください</h4>
+                    <p class="points__item-txt">「仕事が終わる頃には、歯医者も終わっている」<br>「休日を削って通院するのは嫌だ」<br>そんなお悩みにお応えできるよう、平日は22時まで夜間診療を行っています。<br>名古屋駅直通のため、診療後も速やかにご帰宅いただけます。</p>
+                </div>
+                <p class="points__item-img slide-right"><img src="./img/point03_03.jpg" alt="夜の名古屋駅"></p>
+            </div>
+            <a href="#" class="points__btn c-btn slide-up"><span class="points__btn__inner c-btn--inner">more</span></a>
+        </section>
+
+        <section class="points__cont points__cont--left points__cont--03">
+            <h3 class="points__ttl02 c-h3 c-h3--left slide-left">
+                <div class="points__ttl02--inner c-h3__ttl">
+                    <span class="points__ttl02--tag c-h3__ttl--tag">Point. 03</span>
+                    <span class="points__ttl02--txt c-h3__ttl--txt">審美治療の実績数名古屋市No1<br>患者様の個性を生かした<br class="c-br--sp">美しい口元を創造します</span>
+                </div>
+            </h3>
+            <div class="points__item points__item--01">
+                <div class="points__item-txts slide-left">
+                    <h4 class="points__item-ttl c-checklist__ttl">患者様それぞれのお悩みに応じた、<br>適切な審美治療をご提案いたします。</h4>
+                    <p class="points__item-txt">「銀歯を無くしたい」、「治療跡を目立たなくしたい」、<br>「黄ばみや黒ずみのない、美しい歯を目指したい」<br>患者様それぞれの歯のお悩みに応じた治療をご提案致します。<br>ただ見た目を良くするのではなく、機能性とのバランスを考慮した、歯の健康と美しさの両立を実現します。</p>
+                </div>
+                <p class="points__item-img slide-right"><img src="./img/point03_01.jpg" alt="笑顔の口元"></p>
+            </div>
+            <div class="points__item points__item--02">
+                <div class="points__item-txts slide-right">
+                    <h4 class="points__item-ttl c-checklist__ttl">オールセラミックを用いた<br>「美しさ」と「機能性」の両立した<br class="c-br--sp">インプラント治療</h4>
+                    <p class="points__item-txt">上部構造にオールセラミックを用いたインプラント治療により、天然の歯に近い、透き通るような美しい仕上がりをご提供します。<br>金属不使用のため、美しさだけでなく、金属アレルギーの心配がなく、プラーク（歯垢）がつきにくい為、虫歯や歯周病のリスクも低減できます。</p>
+                </div>
+                <p class="points__item-img slide-left"><img src="./img/point03_02.jpg" alt="インプラント画像"></p>
+            </div>
+            <div class="points__item points__item--03">
+                <div class="points__item-txts slide-left">
+                    <h4 class="points__item-ttl c-checklist__ttl">美しい歯を維持するための<br class="c-br--sp">メンテナンスや、<br class="c-br--pc">アフターケアにも<br class="c-br--sp">力を入れています。</h4>
+                    <p class="points__item-txt">セラミック治療を受けたあと、美しい歯を維持するためには、日々のアフターケア・セルフケアも重要です。<br>よつ葉デンタルクリニックでは、歯の健康を維持するためのアフターケアや、患者様ご自身でのセルフケアを実現するための歯磨き指導を行い、虫歯や歯周病の予防治療をご提供しています。</p>
+                </div>
+                <p class="points__item-img slide-right"><img src="./img/point03_03.jpg" alt="派の模型を持つ歯科医"></p>
+            </div>
+            <a href="#" class="points__btn c-btn slide-up"><span class="points__btn__inner c-btn--inner">more</span></a>
+        </section>
+
+    </section>
+    <!-- / point -->
+
+    <!-- treatment -->
+    <section class="treatment" id="treatment">
+
+        <h2 class="treatment__ttl01 c-h2 c-h2--left c-h2--treatment">
+            <div class="treatment__ttl01-inner c-h2__ttl">
+                <span class="treatment__ttl01-inner--en c-h2__ttl--en">treatment</span>
+                <span class="treatment__ttl01-inner--ja c-h2__ttl--ja">診療内容</span>
+            </div>
+        </h2>
+
+        <div class="treatment__inner c-inner">
+
+
+            <section class="treatment__item treatment__item--01 slide-up">
+                <h3 class="treatment__item-ttl01"><span class="treatment__item-ttl01--num">01</span>虫歯・歯周病治療</h3>
+                <div class="treatment__item-cont">
+                    <div class="treatment__item-inner">
+                        <div class="treatment__item-head">
+                            <div class="treatment__item-txts">
+                                <h4 class="treatment__item-ttl02">見出し見出し見出し見出し見出し<br>見出し見出し見出し見出し</h4>
+                                <p class="treatment__item-txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                            </div>
+                            <p class="treatment__item-img"><img src="./img/point02_02.jpg" alt="テスト"></p>
+                        </div>
+                        <div class="treatment__item-foot">
+                            <h5 class="treatment__item-ttl03 c-h3v2">虫歯や歯周病の主な症状</h5>
+                            <div class="treatment__item-lists">
+
+                                <div class="treatment__item-list treatment__item-list--left">
+                                    <h6 class="treatment__item-ttl04">虫歯</h6>
+                                    <ul class="treatment__item-ul">
+                                        <li class="treatment__item-li">冷たいものや甘いものがしみる</li>
+                                        <li class="treatment__item-li">歯がズキズキと痛む</li>
+                                        <li class="treatment__item-li">歯に黒ずみや穴が出来る</li>
+                                    </ul>
+                                </div>
+                                <div class="treatment__item-list treatment__item-list--right">
+                                    <h6 class="treatment__item-ttl04">歯周病</h6>
+                                    <ul class="treatment__item-ul">
+                                        <li class="treatment__item-li">歯ぐきの腫れや出血</li>
+                                        <li class="treatment__item-li">歯のぐらつき、歯が抜ける</li>
+                                        <li class="treatment__item-li">口臭</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <a href="#" class="treatment__item-btn c-btn"><span class="news__cont__btn--inner c-btn--inner">more</span></a>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="treatment__item treatment__item--02 slide-up">
+                <h3 class="treatment__item-ttl01"><span class="treatment__item-ttl01--num">02</span>矯正治療</h3>
+                <div class="treatment__item-cont">
+                    <div class="treatment__item-inner">
+                        <div class="treatment__item-head">
+                            <div class="treatment__item-txts">
+                                <h4 class="treatment__item-ttl02">見出し見出し見出し見出し見出し<br>見出し見出し見出し見出し</h4>
+                                <p class="treatment__item-txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                            </div>
+                            <p class="treatment__item-img"><img src="./img/point02_02.jpg" alt="テスト"></p>
+                        </div>
+                        <div class="treatment__item-foot">
+                            <h5 class="treatment__item-ttl03 c-h3v2">虫歯や歯周病の主な症状</h5>
+                            <div class="treatment__item-lists">
+
+                                <div class="treatment__item-list treatment__item-list--left">
+                                    <h6 class="treatment__item-ttl04">虫歯</h6>
+                                    <ul class="treatment__item-ul">
+                                        <li class="treatment__item-li">冷たいものや甘いものがしみる</li>
+                                        <li class="treatment__item-li">歯がズキズキと痛む</li>
+                                        <li class="treatment__item-li">歯に黒ずみや穴が出来る</li>
+                                    </ul>
+                                </div>
+                                <div class="treatment__item-list treatment__item-list--right">
+                                    <h6 class="treatment__item-ttl04">歯周病</h6>
+                                    <ul class="treatment__item-ul">
+                                        <li class="treatment__item-li">歯ぐきの腫れや出血</li>
+                                        <li class="treatment__item-li">歯のぐらつき、歯が抜ける</li>
+                                        <li class="treatment__item-li">口臭</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <a href="#" class="treatment__item-btn c-btn"><span class="news__cont__btn--inner c-btn--inner">more</span></a>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="treatment__item treatment__item--03 slide-up">
+                <h3 class="treatment__item-ttl01"><span class="treatment__item-ttl01--num">03</span>インプラント</h3>
+                <div class="treatment__item-cont">
+                    <div class="treatment__item-inner">
+                        <div class="treatment__item-head">
+                            <div class="treatment__item-txts">
+                                <h4 class="treatment__item-ttl02">見出し見出し見出し見出し見出し<br>見出し見出し見出し見出し</h4>
+                                <p class="treatment__item-txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                            </div>
+                            <p class="treatment__item-img"><img src="./img/point02_02.jpg" alt="テスト"></p>
+                        </div>
+                        <div class="treatment__item-foot">
+                            <h5 class="treatment__item-ttl03 c-h3v2">虫歯や歯周病の主な症状</h5>
+                            <div class="treatment__item-lists">
+
+                                <div class="treatment__item-list treatment__item-list--left">
+                                    <h6 class="treatment__item-ttl04">虫歯</h6>
+                                    <ul class="treatment__item-ul">
+                                        <li class="treatment__item-li">冷たいものや甘いものがしみる</li>
+                                        <li class="treatment__item-li">歯がズキズキと痛む</li>
+                                        <li class="treatment__item-li">歯に黒ずみや穴が出来る</li>
+                                    </ul>
+                                </div>
+                                <div class="treatment__item-list treatment__item-list--right">
+                                    <h6 class="treatment__item-ttl04">歯周病</h6>
+                                    <ul class="treatment__item-ul">
+                                        <li class="treatment__item-li">歯ぐきの腫れや出血</li>
+                                        <li class="treatment__item-li">歯のぐらつき、歯が抜ける</li>
+                                        <li class="treatment__item-li">口臭</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <a href="#" class="treatment__item-btn c-btn"><span class="news__cont__btn--inner c-btn--inner">more</span></a>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="treatment__item treatment__item--04 slide-up">
+                <h3 class="treatment__item-ttl01"><span class="treatment__item-ttl01--num">04</span>審美治療</h3>
+                <div class="treatment__item-cont">
+                    <div class="treatment__item-inner">
+                        <div class="treatment__item-head">
+                            <div class="treatment__item-txts">
+                                <h4 class="treatment__item-ttl02">見出し見出し見出し見出し見出し<br>見出し見出し見出し見出し</h4>
+                                <p class="treatment__item-txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                            </div>
+                            <p class="treatment__item-img"><img src="./img/point02_02.jpg" alt="テスト"></p>
+                        </div>
+                        <div class="treatment__item-foot">
+                            <h5 class="treatment__item-ttl03 c-h3v2">虫歯や歯周病の主な症状</h5>
+                            <div class="treatment__item-lists">
+
+                                <div class="treatment__item-list treatment__item-list--left">
+                                    <h6 class="treatment__item-ttl04">虫歯</h6>
+                                    <ul class="treatment__item-ul">
+                                        <li class="treatment__item-li">冷たいものや甘いものがしみる</li>
+                                        <li class="treatment__item-li">歯がズキズキと痛む</li>
+                                        <li class="treatment__item-li">歯に黒ずみや穴が出来る</li>
+                                    </ul>
+                                </div>
+                                <div class="treatment__item-list treatment__item-list--right">
+                                    <h6 class="treatment__item-ttl04">歯周病</h6>
+                                    <ul class="treatment__item-ul">
+                                        <li class="treatment__item-li">歯ぐきの腫れや出血</li>
+                                        <li class="treatment__item-li">歯のぐらつき、歯が抜ける</li>
+                                        <li class="treatment__item-li">口臭</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <a href="#" class="treatment__item-btn c-btn"><span class="news__cont__btn--inner c-btn--inner">more</span></a>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="treatment__item treatment__item--05 slide-up">
+                <h3 class="treatment__item-ttl01"><span class="treatment__item-ttl01--num">05</span>メンテナンス</h3>
+                <div class="treatment__item-cont">
+                    <div class="treatment__item-inner">
+                        <div class="treatment__item-head">
+                            <div class="treatment__item-txts">
+                                <h4 class="treatment__item-ttl02">見出し見出し見出し見出し見出し<br>見出し見出し見出し見出し</h4>
+                                <p class="treatment__item-txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                            </div>
+                            <p class="treatment__item-img"><img src="./img/point02_02.jpg" alt="テスト"></p>
+                        </div>
+                        <div class="treatment__item-foot">
+                            <h5 class="treatment__item-ttl03 c-h3v2">虫歯や歯周病の主な症状</h5>
+                            <div class="treatment__item-lists">
+
+                                <div class="treatment__item-list treatment__item-list--left">
+                                    <h6 class="treatment__item-ttl04">虫歯</h6>
+                                    <ul class="treatment__item-ul">
+                                        <li class="treatment__item-li">冷たいものや甘いものがしみる</li>
+                                        <li class="treatment__item-li">歯がズキズキと痛む</li>
+                                        <li class="treatment__item-li">歯に黒ずみや穴が出来る</li>
+                                    </ul>
+                                </div>
+                                <div class="treatment__item-list treatment__item-list--right">
+                                    <h6 class="treatment__item-ttl04">歯周病</h6>
+                                    <ul class="treatment__item-ul">
+                                        <li class="treatment__item-li">歯ぐきの腫れや出血</li>
+                                        <li class="treatment__item-li">歯のぐらつき、歯が抜ける</li>
+                                        <li class="treatment__item-li">口臭</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <a href="#" class="treatment__item-btn c-btn"><span class="news__cont__btn--inner c-btn--inner">more</span></a>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="treatment__qabnr slide-up">
+                <a href="#" class="treatmenttreatment__qabnr-link"><img src="./img/faq_bnr.jpg" alt="よくあるご質問　歯に関するよくあるご質問への回答はこちらをご確認ください"></a>
+            </section>
+
+        </div>
+    </section>
+    <!-- / treatment -->
+
+    <!-- staff -->
+    <section class="staff" id="staff">
+
+        <h2 class="staff__ttl01 c-h2 c-h2--right c-h2--staff">
+            <div class="staff__ttl01__inner c-h2__ttl">
+                <span class="staff__ttl01--en c-h2__ttl--en">Staff</span>
+                <span class="staff__ttl01--ja c-h2__ttl--ja">スタッフ紹介</span>
+            </div>
+        </h2>
+
+        <section class="staff__cont">
+
+            <div class="staff__director">
+
+                <div class="staff__director-left slide-left">
+                    <p class="staff__director-img"><img src="./img/staff_img01.jpg" alt="四葉　一郎"></p>
+                </div>
+
+                <div class="staff__director-right slide-right">
+                    <h3 class="staff__director-name">
+                        <span class="staff__director-name--position">よつ葉デンタルクリニック　院長</span>
+                        <span class="staff__director-name--ja">四葉　一郎</span>
+                        <span class="staff__director-name--en">Ichiro Yotsuba</span>
+                    </h3>
+                    <div class="staff__director-message">
+                        <h4 class="staff__director-ttl staff__director-ttl--01">
+                            <span class="staff__director-ttl--en">Message</span>
+                            <span class="staff__director-ttl--ja">「見出しテキスト見出しテキスト見出しテキスト見出しテキスト見出しテキスト」</span>
+                        </h4>
+                        <p class="staff__director-txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキトテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                    </div>
+                    <div class="staff__director-history">
+                        <h4 class="staff__director-ttl staff__director-ttl--02">
+                            <span class="staff__director-ttl--en">History</span>
+                        </h4>
+                        <dl class="staff__director-dl">
+                            <dt class="staff__director-dt">2010年</dt>
+                            <dd class="staff__director-dd">愛知学院大学歯学部　卒業</dd>
+                            <dt class="staff__director-dt">2011年</dt>
+                            <dd class="staff__director-dd">愛知学院大学附属病院歯科放射線科にて臨床研修</dd>
+                            <dt class="staff__director-dt">2012年~</dt>
+                            <dd class="staff__director-dd">医療法人七条会　よつ葉デンタルクリニック勤務</dd>
+                            <dt class="staff__director-dt">2018年</dt>
+                            <dd class="staff__director-dd">医療法人七条会　よつ葉デンタルクリニック院長就任</dd>
+                        </dl>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="staff__worker c-inner">
+
+                <div class="staff__worker-item slide-up">
+                    <p class="staff__worker-img"><img src="./img/staff_img02.jpg" alt="四葉　太一"></p>
+                    <h3 class="staff__worker-name">
+                        <span class="staff__worker-name--position">歯科医師</span>
+                        <span class="staff__worker-name--ja">四葉　太一</span>
+                        <span class="staff__worker-name--en">Taichi Yotsuba</span>
+                    </h3>
+                    <p class="staff__worker-txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキトテキストテキスト</p>
+                </div>
+                <div class="staff__worker-item slide-up">
+                    <p class="staff__worker-img"><img src="./img/staff_img03.jpg" alt="佐伯　仁美"></p>
+                    <h3 class="staff__worker-name">
+                        <span class="staff__worker-name--position">歯科医師</span>
+                        <span class="staff__worker-name--ja">佐伯　仁美</span>
+                        <span class="staff__worker-name--en">Hitomi Saeki</span>
+                    </h3>
+                    <p class="staff__worker-txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキトテキストテキスト</p>
+                </div>
+                <div class="staff__worker-item slide-up">
+                    <p class="staff__worker-img"><img src="./img/staff_img04.jpg" alt="黒沢　春樹"></p>
+                    <h3 class="staff__worker-name">
+                        <span class="staff__worker-name--position">歯科医師</span>
+                        <span class="staff__worker-name--ja">黒沢　春樹</span>
+                        <span class="staff__worker-name--en">Haruki Kurosawa</span>
+                    </h3>
+                    <p class="staff__worker-txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキトテキストテキスト</p>
+                </div>
+                <div class="staff__worker-item slide-up">
+                    <p class="staff__worker-img"><img src="./img/staff_img05.jpg" alt="清瀬　花江"></p>
+                    <h3 class="staff__worker-name">
+                        <span class="staff__worker-name--position">歯科衛生士</span>
+                        <span class="staff__worker-name--ja">清瀬　花江</span>
+                        <span class="staff__worker-name--en">Hanae kiyose</span>
+                    </h3>
+                    <p class="staff__worker-txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキトテキストテキスト</p>
+                </div>
+                <div class="staff__worker-item slide-up">
+                    <p class="staff__worker-img"><img src="./img/staff_img06.jpg" alt="杉村　佳奈"></p>
+                    <h3 class="staff__worker-name">
+                        <span class="staff__worker-name--position">歯科衛生士</span>
+                        <span class="staff__worker-name--ja">杉村　佳奈</span>
+                        <span class="staff__worker-name--en">Kana Sugimura</span>
+                    </h3>
+                    <p class="staff__worker-txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキトテキストテキスト</p>
+                </div>
+                <div class="staff__worker-item slide-up">
+                    <p class="staff__worker-img"><img src="./img/staff_img07.jpg" alt="磐田　菜々子"></p>
+                    <h3 class="staff__worker-name">
+                        <span class="staff__worker-name--position">歯科衛生士</span>
+                        <span class="staff__worker-name--ja">磐田　菜々子</span>
+                        <span class="staff__worker-name--en">Nanako Iwata</span>
+                    </h3>
+                    <p class="staff__worker-txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキトテキストテキスト</p>
+                </div>
+                <div class="staff__worker-item slide-up">
+                    <p class="staff__worker-img"><img src="./img/staff_img08.jpg" alt="元部　佑介"></p>
+                    <h3 class="staff__worker-name">
+                        <span class="staff__worker-name--position">歯科技工士</span>
+                        <span class="staff__worker-name--ja">元部　佑介</span>
+                        <span class="staff__worker-name--en">Yusuke Motobe</span>
+                    </h3>
+                    <p class="staff__worker-txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキトテキストテキスト</p>
+                </div>
+                <div class="staff__worker-item slide-up">
+                    <p class="staff__worker-img"><img src="./img/staff_img09.jpg" alt="有川　歩美"></p>
+                    <h3 class="staff__worker-name">
+                        <span class="staff__worker-name--position">歯科技工士</span>
+                        <span class="staff__worker-name--ja">有川　歩美</span>
+                        <span class="staff__worker-name--en">Ayumi Arikawa</span>
+                    </h3>
+                    <p class="staff__worker-txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキトテキストテキスト</p>
+                </div>
+                <div class="staff__worker-item slide-up">
+                    <p class="staff__worker-img"><img src="./img/staff_img10.jpg" alt="本間　かおり"></p>
+                    <h3 class="staff__worker-name">
+                        <span class="staff__worker-name--position">歯科助手</span>
+                        <span class="staff__worker-name--ja">本間　かおり</span>
+                        <span class="staff__worker-name--en">Kaori Honma</span>
+                    </h3>
+                    <p class="staff__worker-txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキトテキストテキスト</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </section>
+    <!-- / staff -->
+
+    <!-- footer -->
+    <footer class="footer" id="footer">
+        <div class="footer__head c-inner">
+            <p class="footer__logo"><img src="./img/logo_mix.svg" alt="よつ葉デンタルクリニック"></p>
+        </div>
+        <div class="footer__foot">
+            <div class="footer__foot-inner">
+                <div class="footer__cont">
+                    <div class="footer__cont-left">
+                        <table class="footer__calendar">
+                            <tr class="footer__calendar-line footer__calendar-line--01">
+                                <th class="footer__calendar-th footer__calendar-th--time">診療時間</th>
+                                <th class="footer__calendar-th footer__calendar-th--day">月</th>
+                                <th class="footer__calendar-th footer__calendar-th--day">火</th>
+                                <th class="footer__calendar-th footer__calendar-th--day">水</th>
+                                <th class="footer__calendar-th footer__calendar-th--day">木</th>
+                                <th class="footer__calendar-th footer__calendar-th--day">金</th>
+                                <th class="footer__calendar-th footer__calendar-th--day">土</th>
+                                <th class="footer__calendar-th footer__calendar-th--day">日</th>
+                                <th class="footer__calendar-th footer__calendar-th--day">祝</th>
+                            </tr>
+                            <tr class="footer__calendar-line footer__calendar-line--02">
+                                <td class="footer__calendar-td footer__calendar-td--time">10:00 - 13:00</td>
+                                <td class="footer__calendar-td footer__calendar-td--day"><img src="./img/calender-radius.svg" alt="診察可" class="footer__calendar-radius"></td>
+                                <td class="footer__calendar-td footer__calendar-td--day"><img src="./img/calender-radius.svg" alt="診察可" class="footer__calendar-radius"></td>
+                                <td class="footer__calendar-td footer__calendar-td--day"><img src="./img/calender-radius.svg" alt="診察可" class="footer__calendar-radius"></td>
+                                <td class="footer__calendar-td footer__calendar-td--day"><img src="./img/calender-radius.svg" alt="診察可" class="footer__calendar-radius"></td>
+                                <td class="footer__calendar-td footer__calendar-td--day"><img src="./img/calender-radius.svg" alt="診察可" class="footer__calendar-radius"></td>
+                                <td class="footer__calendar-td footer__calendar-td--day"><img src="./img/calender-radius.svg" alt="診察可" class="footer__calendar-radius"></td>
+                                <td class="footer__calendar-td footer__calendar-td--day"><img src="./img/calender-none.svg" alt="休診" class="footer__calendar-none"></td>
+                                <td class="footer__calendar-td footer__calendar-td--day"><img src="./img/calender-none.svg" alt="休診" class="footer__calendar-none"></td>
+                            </tr>
+                            <tr class="footer__calendar-line footer__calendar-line--03">
+                                <td class="footer__calendar-td footer__calendar-td--time">15:00 - 22:00</td>
+                                <td class="footer__calendar-td footer__calendar-td--day"><img src="./img/calender-radius.svg" alt="診察可" class="footer__calendar-radius"></td>
+                                <td class="footer__calendar-td footer__calendar-td--day"><img src="./img/calender-radius.svg" alt="診察可" class="footer__calendar-radius"></td>
+                                <td class="footer__calendar-td footer__calendar-td--day"><img src="./img/calender-radius.svg" alt="診察可" class="footer__calendar-radius"></td>
+                                <td class="footer__calendar-td footer__calendar-td--day"><img src="./img/calender-radius.svg" alt="診察可" class="footer__calendar-radius"></td>
+                                <td class="footer__calendar-td footer__calendar-td--day"><img src="./img/calender-radius.svg" alt="診察可" class="footer__calendar-radius"></td>
+                                <td class="footer__calendar-td footer__calendar-td--day"><img src="./img/calender-none.svg" alt="休診" class="footer__calendar-none"></td>
+                                <td class="footer__calendar-td footer__calendar-td--day"><img src="./img/calender-none.svg" alt="休診" class="footer__calendar-none"></span></td>
+                                <td class="footer__calendar-td footer__calendar-td--day"><img src="./img/calender-none.svg" alt="休診" class="footer__calendar-none"></td>
+                            </tr>
+                        </table>
+                        <div class="footer__contact">
+                            <a class="footer__contact-phone  c-phonebtn" href="tel:0521234567" target="_blank" rel="noopener noreferrer">
+                                <span class="footer__contact-phone--number  c-phonebtn--number">052-123-4567</span><br>
+                                <span class="footer__contact-phone--time01  c-phonebtn--time01">平日 10:00 - 13:00 / 15:00 - 22:00</span>
+                                <span class="footer__contact-phone--time02  c-phonebtn--time02">土曜 10:00 - 13:00</span>
+                            </a>
+                            <a href="#" class="footer__contact-linebtn"><img src="./img/line_bnr_mini02.svg" alt="LINEかんたん診療予約"></a>
+                        </div>
+                    </div>
+                    <div class="footer__cont-right">
+                        <div class="footer__gmap"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1630.7133698716616!2d136.8794378520898!3d35.17091504154591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600376e794d78b89%3A0x81f7204bf8261663!2z5ZCN5Y-k5bGL6aeF!5e0!3m2!1sja!2sjp!4v1760403399989!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                        <p class="footer__address">
+                            <span class="footer__address--green c-green">〒450-1007</span><br>
+                            愛知県名古屋市中村区名駅7丁目205 - 31<br>名駅セントラルセブンビル７階(名駅18番出口直通）<br>
+                            <span class="footer__address--green c-green">TEL:</span>052 - 123 - 4567／<span class="footer__address--green c-green">FAX:</span> 06-6345-8146
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <p class="footer__copy">Copyright © lifestandard Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- / footer -->
+
+</body>
+</html>

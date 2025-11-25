@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+// config
+@use "config/fonts";
+@use "config/variables";
+
+//common
+@use "common/common";
+@use "common/header";
+@use "common/footer";
+
+
+//index
+@use "index/fv";
+@use "index/news";
+@use "index/info";
+@use "index/point";
+@use "index/treatment";
+@use "index/staff";
+
+
+
+

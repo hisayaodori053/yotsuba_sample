@@ -1,0 +1,58 @@
+@use "sass:map";
+
+//ブレイクポイント
+$inner: 1100px;
+$pc: 960px;
+$tb: 750px;
+$sp: 420px;
+
+//フォント
+$noto-sans: "Noto Sans JP", sans-serif;
+$noto-serif: "Noto Serif JP", serif;
+
+//色
+$theme-bk: #333;
+$dark-green : #567924;
+$notes-green: #8CC63F;
+$bg-green : #F3F9EB;
+$ttl-bg-green : #D9EBC0;
+$line-green: #06C755;
+$theme-gradation: linear-gradient(to right, rgba(86, 121, 36, 1) 10.29%, rgba(140, 198, 63, 1) 79.72%, rgba(164, 209, 101, 1) 100%, rgba(217, 235, 192, 1) 100%);
+$theme-gradation-hover: linear-gradient(to right, rgba(171, 237, 77, 1) 10%, rgba(220, 251, 172, 1) 40%, rgba(245, 255, 230, 1) 68%);
+
+//h2下のボーダーのグラデーション
+$h2-left-border-gradation: linear-gradient(to right, #567924,#8CC63F 40%,#D9EBC0 calc(50% + 400px),#fff calc(50% + 550px)) 1;
+$h2-left-border-gradation-inner: linear-gradient(to right, #567924,#8CC63F 40%,#D9EBC0 80%,#fff 90%) 1;
+$h2-right-border-gradation: linear-gradient(to left, #567924,#8CC63F 40%,#D9EBC0 calc(50% + 400px),#fff calc(50% + 550px)) 1;
+$h2-right-border-gradation-inner: linear-gradient(to left, #567924,#8CC63F 40%,#D9EBC0 80%,#fff 90%) 1;
+
+//フッターの横ライン
+$footer-left-border-gradation: linear-gradient(to right, #fff,#fff 90%,rgba(255,255,255, 0.5) 95%,rgba(255,255,255,0)) 1;
+
+//左右から迫り出す背景
+$bg-right-gradation: linear-gradient(to left, $bg-green, $bg-green calc(50% + 350px),#fff calc(50% + 350px), #fff);
+$bg-right-gradation-inner: linear-gradient(to left, $bg-green, $bg-green 75%,#fff 75%, #fff);
+$bg-right-gradation-sp: linear-gradient(to left, $bg-green, $bg-green 95%,#fff 95%, #fff);
+$bg-left-gradation: linear-gradient(to right, $bg-green, $bg-green calc(50% + 350px),#fff calc(50% + 350px), #fff);
+$bg-left-gradation-inner: linear-gradient(to right, $bg-green, $bg-green 75%,#fff 75%, #fff);
+$bg-left-gradation-sp: linear-gradient(to right, $bg-green, $bg-green calc(100% - 10px),#fff calc(100% - 10px), #fff);
+
+//
+$bg-white-gradation: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0.6) 90%, rgba(255,255,255,0) 100%);
+
+$breakpoints: (
+  "under1250" : "screen and (max-width: 1250px)",
+  "inner+20": "screen and (max-width: 1120px)",
+  "inner": "screen and (max-width: 1100px)",
+  "pc": "screen and (min-width: 960px)",
+  "tb": "screen and (max-width: 795px)",
+  "sp": "screen and (max-width: 420px)",
+  "small-sp": "screen and (max-width: 320px)",
+  "under-600": "screen and (max-height: 600px)",
+);
+
+@mixin breakPoint($key) {
+  @media #{map.get($breakpoints, $key)} {
+    @content;
+  }
+}

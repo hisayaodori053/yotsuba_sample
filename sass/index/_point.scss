@@ -1,0 +1,272 @@
+@use '../config/variables' as var;
+
+.points {
+    margin: 0 0 120px;
+    overflow: hidden;
+
+    @include var.breakPoint("tb") {
+        margin: 0 0 50px;
+    }
+
+    &__ttl02 {
+        
+        &--inner {
+            @include var.breakPoint("inner+20") {
+                padding: 0 0 0 20px;
+            }
+        }
+
+        @include var.breakPoint("tb") {
+            width: 85%;
+        }
+    }
+
+    &__cont {
+        position: relative;
+        padding: 50px 0;
+        margin: 0 0 80px;
+
+        @include var.breakPoint("tb") {
+            margin: 0 0 50px;
+        }
+
+        &:before{
+            content: "";
+            position: absolute;
+            top: 20px;
+            font-size: 150px;
+            font-family: var.$noto-serif;
+            line-height: 1;
+            color: #fff;
+
+            @include var.breakPoint("tb") {
+                top: 10px;
+                font-size: 100px;
+            }
+        }
+
+        &--left {
+            background: linear-gradient(to right, var.$bg-green, var.$bg-green calc(50% + 640px),#fff calc(50% + 640px), #fff);
+
+            @include var.breakPoint("under1250") {
+                background: linear-gradient(to right, var.$bg-green, var.$bg-green calc(100% - 50px),#fff calc(100% - 50px), #fff);
+            }
+
+            @include var.breakPoint("tb"){
+                background: linear-gradient(to right, var.$bg-green, var.$bg-green 95%,#fff 95%, #fff);
+            }
+
+            &:before {
+                right: 165px;
+
+                @include var.breakPoint("under1250") {
+                    right: 80px;
+                }
+
+                @include var.breakPoint("tb") {
+                    right: 30px;
+                }
+            }
+
+            .points__item {
+
+                @include var.breakPoint("under1250"){
+                    justify-content: flex-start;
+                    margin: 0 40px 40px 0;
+                }
+
+                @include var.breakPoint("tb") {
+                    margin: 0 auto 40px 0;
+                }
+            }
+        }
+
+        &--right {
+            background: linear-gradient(to left, var.$bg-green, var.$bg-green calc(50% + 640px),#fff calc(50% + 640px), #fff);
+
+            @include var.breakPoint("under1250") {
+                background: linear-gradient(to left, var.$bg-green, var.$bg-green calc(100% - 50px),#fff calc(100% - 50px), #fff);
+            }
+
+            @include var.breakPoint("tb"){
+                background: linear-gradient(to left, var.$bg-green, var.$bg-green 95%,#fff 95%, #fff);
+            }
+
+            &:before {
+                left: 165px;
+
+                @include var.breakPoint("under1250") {
+                    left: 80px;
+                }
+
+                @include var.breakPoint("tb") {
+                    left: inherit;
+                    right: 30px;
+                }
+            }
+
+            .points__ttl02-inner{
+                @include var.breakPoint("tb") {
+                    padding: 0
+                }
+            }
+
+
+            .points__item {
+
+                @include var.breakPoint("under1250"){
+                    justify-content: flex-end;
+                    margin: 0 0 40px 80px;
+                }
+
+                @include var.breakPoint("tb") {
+                    background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0.6) 90%, rgba(255,255,255,0) 100%);
+                    margin: 0 0 40px auto;
+                }
+            }
+        }
+
+        &--01, &--03 {
+
+            .points__item-txts {
+                @include var.breakPoint("tb") {
+                    margin: 20px auto 0 0;
+                }
+            }
+        }
+
+        &--01 {
+
+            &:before{
+                content: "01";
+            }
+        }
+
+        &--02 {
+
+            &:before{
+                content: "02";
+            }
+
+            .points__item-txts {
+                @include var.breakPoint("tb") {
+                    margin: 20px 0 0 auto;
+                }
+            }
+        }
+
+        &--03 {
+
+            &:before{
+                content: "03";
+            }
+        }
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        max-width: 1100px;
+        margin: 0 auto 80px;
+        padding: 0 0 30px;
+
+        @include var.breakPoint("tb") {
+            background: var.$bg-white-gradation;
+            display: block;
+            width: 90%;
+        }
+
+        &--01, &--03 {
+            .points__item-img{
+                @include var.breakPoint("under1250") {
+                    margin: 0 0 0 30px;
+                }
+
+                @include var.breakPoint("tb") {
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        &--02 {
+            flex-direction: row-reverse;
+
+            .points__item-img{
+                @include var.breakPoint("under1250") {
+                    margin: 0 30px 0 0;
+                }
+
+                @include var.breakPoint("tb") {
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        &-txts {
+            padding: 20px 0 40px 20px;
+            background: var.$bg-white-gradation;
+            width: 50%;
+
+            @include var.breakPoint("tb") {
+                padding: 20px 10px 30px;
+                width: 95%;
+                background: transparent;
+            }
+        }
+
+        &-txt {
+            margin: 0 30px 0 35px;
+            letter-spacing: .01em;
+            line-height: 1.6;
+
+            @include var.breakPoint("tb") {
+                margin: 0 0 35px;
+            }
+
+            &--notes {
+                margin: 5px 0 0;
+                display: block;
+                text-indent: -1em;
+                padding-left: 1em;
+                color: var.$notes-green;
+            }
+        }
+
+        &-img {
+            width: 460px;
+            height: 250px;
+            line-height: 0;
+            box-shadow: 10px 10px 0px #AABEAA;
+
+            @include var.breakPoint("under1250") {
+                width: 400px;
+                height: 220px;
+            }
+
+            @include var.breakPoint("inner") {
+                width: 350px;
+                height: 200px;
+            }
+
+
+            @include var.breakPoint("sp") {
+                width: 280px;
+                height: 140px;
+            }
+
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__btn {
+        margin: 0 auto;
+
+    }
+
+}
